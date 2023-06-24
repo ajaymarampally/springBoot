@@ -48,7 +48,7 @@ services:
   ## Keycloak Config with Mysql database
   keycloak-mysql:
     container_name: keycloak-mysql
-    image: mysql:5.7
+    image: mysql:latest
     volumes:
       - ./mysql_keycloak_data:/var/lib/mysql
     environment:
@@ -59,7 +59,7 @@ services:
 
   keycloak:
     container_name: keycloak
-    image: quay.io/keycloak/keycloak:18.0.0
+    image: quay.io/keycloak/keycloak:21.1.1
     command: [ "start-dev", "--import-realm" ]
     environment:
       DB_VENDOR: MYSQL
@@ -191,7 +191,7 @@ services:
     ports:
       - "9090:9090"
     volumes:
-      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ${PROMETHEUS_CONFIG_PATH}:/etc/prometheus/prometheus.yml
     depends_on:
       - product-service
       - inventory-service
