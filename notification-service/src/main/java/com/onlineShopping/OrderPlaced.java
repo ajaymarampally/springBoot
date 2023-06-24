@@ -1,4 +1,4 @@
-package org.onlineShopping;
+package com.onlineShopping;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

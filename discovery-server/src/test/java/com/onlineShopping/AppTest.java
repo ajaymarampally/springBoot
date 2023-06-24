@@ -1,4 +1,4 @@
-package org.onlineShopping;
+package com.onlineShopping;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
