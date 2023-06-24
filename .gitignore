@@ -24,6 +24,8 @@ target/
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
+/postgres-order
+/postgres-inventory
 /dist/
 /nbdist/
 /.nb-gradle/
